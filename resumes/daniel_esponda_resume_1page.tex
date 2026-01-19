@@ -1,0 +1,96 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+% ATS-friendly formatting
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section formatting - very tight
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{2pt}
+
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{4pt}{1pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+
+\begin{document}
+
+% Header
+{\Large \textbf{DANIEL ESPONDA}}
+
+\vspace{2pt}
+
+\href{mailto:danielresponda@gmail.com}{danielresponda@gmail.com} $|$ 214-288-7740 $|$ Richmond, VA $|$ \href{https://github.com/desponda}{github.com/desponda} $|$ \href{https://linkedin.com/in/danielesponda}{linkedin.com/in/danielesponda}
+
+\vspace{4pt}
+
+% Professional Summary - very brief
+\section*{SUMMARY}
+
+Staff SRE with 10+ years building CI/CD platforms and Kubernetes infrastructure. Lead SRE at Datadog processing 13M builds/month, saving \$7M annually. Expert in platform engineering, incident command, and cost optimization at scale (5,000+ nodes, 99.99\%+ uptime).
+
+\vspace{2pt}
+
+% Technical Skills - compact
+\section*{SKILLS}
+
+Kubernetes $|$ Docker $|$ AWS $|$ GCP $|$ Python $|$ Go $|$ Java $|$ Terraform $|$ GitLab $|$ Jenkins $|$ Kafka $|$ Istio $|$ Prometheus $|$ Grafana $|$ Datadog $|$ ELK $|$ GitOps $|$ Service Mesh $|$ CI/CD Platforms $|$ Incident Management $|$ CKAD Certified
+
+\vspace{2pt}
+
+% Work Experience - highest impact only
+\section*{EXPERIENCE}
+
+\subsection*{Datadog --- Staff Site Reliability Engineer, CI Infrastructure \hfill \textit{June 2025 - Present}}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt]
+    \item Lead technical strategy for CI/CD platform: 13M builds/month, 1,000+ engineers, 99.95\%+ uptime SLA
+    \item Core Incident Commander: lead enterprise-wide outage response, train IC teams (2023-Present)
+\end{itemize}
+
+\subsection*{Datadog --- Senior Software Engineer, CI Infrastructure \hfill \textit{Aug 2022 - June 2025}}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt]
+    \item Reduced annual CI costs \$10M → \$3M (70\%, \$7M savings) via optimization and intelligent scaling
+    \item Built ddci (custom CI system) reducing pipeline time 70min → 7-12min (90\% faster)
+\end{itemize}
+
+\subsection*{VMware --- Staff Site Reliability Engineer \hfill \textit{Nov 2020 - Aug 2022}}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt]
+    \item Led largest SaaS K8s platform: 5,000+ nodes, 100+ clusters, 99.99\%+ uptime
+    \item Built custom K8s operators in Go reducing manual operations 40 hrs/week → $<$12 hrs/week
+\end{itemize}
+
+\subsection*{Toyota Connected --- Senior Site Reliability Engineer \hfill \textit{Oct 2019 - Nov 2020}}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt]
+    \item Built enterprise K8s platform (80+ teams): 99.5\% → 99.9\% availability, 40\% cost reduction
+    \item Deployed ELK cluster processing 3TB/day at 80\% cost savings vs commercial solutions
+\end{itemize}
+
+\subsection*{Capital One --- Site Reliability Engineer Manager \hfill \textit{Feb 2016 - Oct 2019}}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt]
+    \item Managed K8s platform (AWS/GCP) for 500+ microservices, 80+ teams (60\% IC, 40\% leadership)
+    \item Migrated 100+ microservices to AWS/K8s, completed 3 months early; reduced MTTR 2.1hr → 52min
+\end{itemize}
+
+\subsection*{Pariveda Solutions --- Senior Software Engineer \hfill \textit{Aug 2014 - Feb 2016}}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt]
+    \item Architected hybrid cloud solutions (AWS/Chef/Jenkins); built RESTful APIs (Java/Spring)
+\end{itemize}
+
+\vspace{2pt}
+
+\section*{EDUCATION}
+
+\textbf{University of Texas at Dallas} --- B.S. Computer Science, Cum Laude, GPA: 3.92 \hfill \textit{2013}
+
+\end{document}

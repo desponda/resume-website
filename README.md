@@ -35,6 +35,38 @@ docker run -p 8080:80 resume-website
 
 Visit http://localhost:8000 or http://localhost:8080
 
+## Resume Management
+
+### Quick Update & Regenerate
+
+To update your resume content and regenerate all PDFs:
+
+```bash
+# 1. Edit the LaTeX files in resumes/ directory
+vim resumes/daniel_esponda_resume_3page.tex
+
+# 2. Regenerate all resume versions
+./regenerate-resume.sh
+
+# 3. Commit and deploy
+git add .
+git commit -m "Update resume: [your changes]"
+git push
+```
+
+The script automatically:
+- ✅ Compiles 3-page, 2-page, and 1-page versions
+- ✅ Copies the main resume to `public/` directory
+- ✅ Validates LaTeX compilation
+- ✅ Cleans up temporary files
+
+**Resume Files:**
+- `resumes/daniel_esponda_resume_3page.tex` - Full detailed version (recommended)
+- `resumes/daniel_esponda_resume_2page.tex` - Concise version
+- `resumes/daniel_esponda_resume_1page.tex` - Executive summary
+
+See `resumes/README.md` for detailed update instructions and tips.
+
 ## Deployment
 
 Deployed automatically via ArgoCD when changes are pushed to main:
@@ -47,6 +79,11 @@ Deployed automatically via ArgoCD when changes are pushed to main:
 
 ```
 .
+├── resumes/                   # Resume source files (LaTeX)
+│   ├── daniel_esponda_resume_3page.tex
+│   ├── daniel_esponda_resume_2page.tex
+│   ├── daniel_esponda_resume_1page.tex
+│   └── README.md             # Resume update guide
 ├── public/                    # Website files
 │   ├── index.html            # Main HTML
 │   ├── style.css             # Styles
@@ -54,6 +91,7 @@ Deployed automatically via ArgoCD when changes are pushed to main:
 ├── k8s/                      # Kubernetes manifests
 │   └── helm/resume-website/  # Helm chart
 ├── .github/workflows/        # CI/CD
+├── regenerate-resume.sh      # Resume compilation script
 ├── Dockerfile                # Container definition
 └── nginx.conf               # nginx configuration
 ```

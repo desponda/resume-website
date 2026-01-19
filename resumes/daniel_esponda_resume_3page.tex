@@ -1,0 +1,170 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% ATS-friendly formatting
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section formatting - slightly tighter
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{3pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+
+\begin{document}
+
+% Header
+{\LARGE \textbf{DANIEL ESPONDA}}
+
+\vspace{4pt}
+
+\href{mailto:danielresponda@gmail.com}{danielresponda@gmail.com} $|$
+214-288-7740 $|$
+Richmond, VA
+
+\href{https://github.com/desponda}{github.com/desponda} $|$
+\href{https://linkedin.com/in/danielesponda}{linkedin.com/in/danielesponda} $|$
+\href{https://dresponda.com}{dresponda.com}
+
+\vspace{6pt}
+
+% Professional Summary
+\section*{PROFESSIONAL SUMMARY}
+
+Site Reliability Engineer with 10+ years building large-scale CI/CD platforms and Kubernetes infrastructure at companies like Datadog, VMware, Toyota, and Capital One. Specialized in developer productivity platforms processing 13M+ builds monthly, multi-region Kubernetes architectures serving 5,000+ nodes, and incident command for enterprise-wide outages. Expert in platform engineering that eliminates operational toil, reduces infrastructure costs by millions annually (70\%+ cost reductions), and accelerates development velocity through intelligent automation. Core Incident Commander with expertise leading cross-functional response to business-critical incidents.
+
+\vspace{4pt}
+
+% Technical Skills
+\section*{TECHNICAL SKILLS}
+
+\textbf{Platform Engineering:} Kubernetes, Docker, CI/CD Platforms, GitLab, Jenkins, Build Systems, Developer Productivity Tools
+
+\textbf{Cloud \& Infrastructure:} AWS (EC2, ECS, Lambda, S3, RDS), GCP, Multi-Region Architecture, Terraform, Infrastructure as Code
+
+\textbf{Programming \& Automation:} Python, Go, Java, Bash, GitOps (ArgoCD, Flux), Custom Tooling Development
+
+\textbf{Distributed Systems:} Apache Kafka, gRPC, Event-Driven Architecture, Service Mesh (Istio, Envoy), Microservices
+
+\textbf{Observability \& SRE:} Prometheus, Grafana, Datadog, ELK Stack, SLI/SLO/SLA, Incident Management, Incident Response, On-Call Operations
+
+\textbf{Database \& Storage:} MySQL, MongoDB, Cassandra, Gitaly, Large-Scale Git Repository Management
+
+\textbf{Security \& Compliance:} DevSecOps, Vault, Secrets Management, PCI, SOC 2, FedRAMP, HIPAA, Policy-as-Code
+
+\vspace{4pt}
+
+% Certifications
+\section*{CERTIFICATIONS}
+
+Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ AWS Certified Solutions Architect - Professional $|$ AWS Certified Solutions Architect - Associate $|$ AWS Certified Developer - Associate
+
+\vspace{4pt}
+
+% Work Experience
+\section*{PROFESSIONAL EXPERIENCE}
+
+\subsection*{Datadog --- Staff Site Reliability Engineer, CI Infrastructure}
+\textit{Remote, US} \hfill \textit{June 2025 - Present}
+
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Lead technical strategy and architecture for Datadog's internal CI/CD platform processing 13M+ builds/month, serving 1,000+ engineers globally
+    \item Serve as Core Incident Commander for enterprise-wide severe outages impacting major clients, leading cross-functional incident response and driving post-incident improvements (2023-Present)
+    \item Architect and implement platform-wide improvements to CI/CD infrastructure, focusing on cost optimization, performance, and developer experience
+    \item Train and onboard new Incident Commander team members, developing incident response playbooks, simulation exercises, and best practices for high-pressure incident management
+    \item Drive long-term technical roadmap for CI infrastructure evolution, capacity planning, and scaling strategies
+\end{itemize}
+
+\subsection*{Datadog --- Senior Software Engineer, CI Infrastructure}
+\textit{Remote, US} \hfill \textit{August 2022 - June 2025}
+
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Built and maintained CI/CD infrastructure processing 13 million builds per month, achieving 99.95\%+ uptime SLA through automated failover and graceful degradation strategies
+    \item Reduced annual CI infrastructure costs from \$10M to \$3M (70\% reduction, \$7M savings) through intelligent node selection, resource optimization, and automated scaling strategies
+    \item Designed and built ddci, a custom enterprise CI system with task engine framework enabling reusable pipelines and smart dependency detection—adopted as company-wide standard
+    \item Reduced pipeline execution time from 70 minutes to 7-12 minutes (up to 90\% faster) through persistent runner framework, Docker image warm caching, and build impact analysis integration
+    \item Architected build impact analysis service that analyzes code changes to determine affected dependencies and optimize CI/CD execution—eliminating unnecessary builds and reducing infrastructure waste by 60\%+
+    \item Engineered persistent runner framework with intelligent caching for 20GB+ monorepo (10,000+ commits/day), solving extreme-scale Git checkout performance challenges
+    \item Optimized Gitaly cluster configuration to handle 10,000+ commits/day across 20GB+ monorepo, reducing Git clone times from 15+ minutes to $<$2 minutes through custom checkout strategies
+    \item Implemented Vertical Pod Autoscaler (VPA) for automatic resource sizing across CI workloads, eliminating manual tuning overhead and optimizing cluster utilization for 1,000+ pipeline configurations
+\end{itemize}
+
+\subsection*{VMware --- Staff Site Reliability Engineer}
+\textit{Remote, TX} \hfill \textit{November 2020 - August 2022}
+
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Provided technical leadership for VMware's largest SaaS Kubernetes platform with 5,000+ nodes across 100+ clusters in AWS and Azure, achieving 99.99\%+ platform uptime
+    \item Led architecture and development of custom Kubernetes operators in Go to automate cluster provisioning, upgrades, and configuration drift detection—reducing manual operations from 40 hours/week to $<$12 hours/week
+    \item Designed and deployed global service mesh using Istio across multi-cloud environments, implementing zero-trust networking with mTLS, rate limiting, and circuit breaking for 300+ microservices
+    \item Owned delivery of critical platform services including API Gateway, Vault secrets management, and Prometheus monitoring stack—serving as shared infrastructure for 200+ engineering teams
+    \item Maintained platform compliance with PCI, HIPAA, and FedRAMP audits through automated policy enforcement using OPA, continuous security scanning, and infrastructure-as-code validation
+    \item Built multi-region disaster recovery architecture with automated failover, achieving RPO $<$15 minutes and RTO $<$30 minutes for Tier 1 services
+\end{itemize}
+
+\subsection*{Toyota Connected --- Senior Site Reliability Engineer}
+\textit{Plano, TX} \hfill \textit{October 2019 - November 2020}
+
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Designed enterprise-wide Kubernetes platform on AWS serving 80+ development teams, improving system availability from 99.5\% to 99.9\% while reducing compute costs by 40\%
+    \item Established comprehensive software reliability engineering standards including SLI/SLO definitions, error budgets, and incident management processes for 50+ production services
+    \item Built self-service developer platform using Python and Flask—reducing provisioning time from 3 days to 15 minutes and eliminating ticket-based workflows
+    \item Deployed global ELK cluster with Kafka integration processing 3TB/day of log data, achieving 80\% cost reduction compared to commercial alternatives
+    \item Implemented event-driven infrastructure automation using Kafka and Lambda to orchestrate configuration changes and deployments across distributed systems
+    \item Automated AWS account policy enforcement through policy-as-code using Cloud Custodian across 40+ AWS accounts
+    \item Led incident response for production outages, coordinating cross-team troubleshooting and implementing automated remediation to reduce MTTR
+\end{itemize}
+
+\subsection*{Capital One --- Site Reliability Engineer Manager}
+\textit{Plano, TX} \hfill \textit{February 2016 - October 2019}
+
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Managed architecture and site reliability practice for enterprise-wide Kubernetes infrastructure spanning AWS and GCP, supporting 500+ microservices as technical lead with 60\% hands-on engineering
+    \item Led cloud migration initiative for 100+ microservices from on-premise data centers to AWS and Kubernetes, completing migration 3 months ahead of schedule
+    \item Designed multi-cloud Kubernetes architecture with unified control plane and cross-cloud service discovery, reducing vendor lock-in risk and enabling cost-optimized workload placement
+    \item Reduced incident MTTR from 2.1 hours to 52 minutes through automated runbook execution, enhanced observability, and streamlined incident response workflows
+    \item Provided Kubernetes coaching and cloud expertise to engineering teams, conducting 50+ training sessions and architectural reviews during enterprise cloud transformation
+    \item Implemented comprehensive SLI/SLO frameworks and automated incident detection for business-critical services, establishing reliability culture across development organizations
+\end{itemize}
+
+\subsection*{Pariveda Solutions --- Senior Software Engineer}
+\textit{Plano, TX} \hfill \textit{August 2014 - February 2016}
+
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Architected automated hybrid cloud solution using AWS, Chef, and Jenkins, enabling rapid environment provisioning for enterprise clients
+    \item Developed cloud migration strategy for transitioning legacy applications from physical servers to hybrid cloud infrastructure
+    \item Built RESTful API services and back-end systems for cross-platform mobile applications using Java and Spring Framework
+\end{itemize}
+
+\vspace{4pt}
+
+% Education
+\section*{EDUCATION}
+
+\textbf{University of Texas at Dallas} --- Richardson, TX \hfill \textit{Graduated 2013}
+
+Bachelor of Science in Computer Science $|$ Cum Laude $|$ GPA: 3.92 $|$ Dean's List
+
+\vspace{4pt}
+
+% Open Source & Community
+\section*{OPEN SOURCE \& COMMUNITY}
+
+\textbf{Kubernetes 1.21 Bug Triage} --- CNCF Release Team Member (January - April 2021): Contributed to Kubernetes v1.21 release as bug triage team member, reviewing and categorizing issues, coordinating with sig-leads, and ensuring release quality
+
+\textbf{Technical Projects \& Contributions} --- Portfolio: \href{https://github.com/desponda}{github.com/desponda} - Open source contributions demonstrating expertise in infrastructure automation, CI/CD systems, and platform engineering
+
+\end{document}
