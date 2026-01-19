@@ -11,12 +11,12 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
-% Section formatting - slightly tighter
+% Section formatting - tighter for 3 pages
 \titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\section}{0pt}{8pt}{3pt}
 
 \titleformat{\subsection}{\large\bfseries}{}{0em}{}
-\titlespacing*{\subsection}{0pt}{6pt}{3pt}
+\titlespacing*{\subsection}{0pt}{5pt}{2pt}
 
 % Hyperlink setup
 \hypersetup{
@@ -40,14 +40,14 @@ Richmond, VA
 \href{https://linkedin.com/in/danielesponda}{linkedin.com/in/danielesponda} $|$
 \href{https://dresponda.com}{dresponda.com}
 
-\vspace{6pt}
+\vspace{5pt}
 
 % Professional Summary
 \section*{PROFESSIONAL SUMMARY}
 
 Site Reliability Engineer with 10+ years building large-scale CI/CD platforms and Kubernetes infrastructure at companies like Datadog, VMware, Toyota, and Capital One. Specialized in developer productivity platforms processing 13M+ builds monthly, multi-region Kubernetes architectures serving 5,000+ nodes, and incident command for enterprise-wide outages. Expert in platform engineering that eliminates operational toil, reduces infrastructure costs by millions annually (70\%+ cost reductions), and accelerates development velocity through intelligent automation. Core Incident Commander with expertise leading cross-functional response to business-critical incidents.
 
-\vspace{4pt}
+\vspace{3pt}
 
 % Technical Skills
 \section*{TECHNICAL SKILLS}
@@ -62,18 +62,18 @@ Site Reliability Engineer with 10+ years building large-scale CI/CD platforms an
 
 \textbf{Observability \& SRE:} Prometheus, Grafana, Datadog, ELK Stack, SLI/SLO/SLA, Incident Management, Incident Response, On-Call Operations
 
-\textbf{Database \& Storage:} MySQL, MongoDB, Cassandra, Gitaly, Large-Scale Git Repository Management
+\textbf{Database \& Storage:} PostgreSQL, MongoDB, Cassandra, Gitaly, Large-Scale Git Repository Management
 
 \textbf{Security \& Compliance:} DevSecOps, Vault, Secrets Management, PCI, SOC 2, FedRAMP, HIPAA, Policy-as-Code
 
-\vspace{4pt}
+\vspace{3pt}
 
 % Certifications
 \section*{CERTIFICATIONS}
 
 Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ AWS Certified Solutions Architect - Professional $|$ AWS Certified Solutions Architect - Associate $|$ AWS Certified Developer - Associate
 
-\vspace{4pt}
+\vspace{3pt}
 
 % Work Experience
 \section*{PROFESSIONAL EXPERIENCE}
@@ -81,7 +81,7 @@ Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ A
 \subsection*{Datadog --- Staff Site Reliability Engineer, CI Infrastructure}
 \textit{Remote, US} \hfill \textit{June 2025 - Present}
 
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+\begin{itemize}[leftmargin=*, itemsep=0.5pt, topsep=2pt]
     \item Drive ddci adoption as company-wide CI standard, refining architecture and guiding engineering teams through migration from legacy systems
     \item Architect ddci multi-tenancy framework enabling secure build isolation across 100+ teams while maintaining 99.95\% platform availability and preventing resource contention
     \item Mentor engineers on AI-assisted development best practices including Claude Code, modern tooling workflows, and developer productivity optimization
@@ -94,7 +94,7 @@ Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ A
 \subsection*{Datadog --- Senior Software Engineer, CI Infrastructure}
 \textit{Remote, US} \hfill \textit{August 2022 - June 2025}
 
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+\begin{itemize}[leftmargin=*, itemsep=0.5pt, topsep=2pt]
     \item Built and maintained CI/CD infrastructure processing 13M builds/month, achieving 99.95\%+ uptime SLA through automated failover and graceful degradation strategies
     \item Reduced annual CI infrastructure costs from \$10M to \$3M (70\% reduction, \$7M savings) through intelligent node selection, resource optimization, and automated scaling strategies
     \item Designed and built ddci, custom enterprise CI system with task engine framework enabling reusable pipelines and smart dependency detection—foundation for company-wide standard
@@ -109,7 +109,7 @@ Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ A
 \subsection*{VMware --- Staff Site Reliability Engineer}
 \textit{Remote, TX} \hfill \textit{November 2020 - August 2022}
 
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+\begin{itemize}[leftmargin=*, itemsep=0.5pt, topsep=2pt]
     \item Provided technical leadership for VMware's largest SaaS Kubernetes platform with 5,000+ nodes across 100+ clusters in AWS and Azure, achieving 99.99\%+ platform uptime
     \item Led architecture and development of custom Kubernetes operators in Go to automate cluster provisioning, upgrades, and configuration drift detection—reducing manual operations from 40 hours/week to $<$12 hours/week
     \item Designed and deployed global service mesh using Istio across multi-cloud environments, implementing zero-trust networking with mTLS, rate limiting, and circuit breaking for 300+ microservices
@@ -121,7 +121,7 @@ Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ A
 \subsection*{Toyota Connected --- Senior Site Reliability Engineer}
 \textit{Plano, TX} \hfill \textit{October 2019 - November 2020}
 
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+\begin{itemize}[leftmargin=*, itemsep=0.5pt, topsep=2pt]
     \item Designed enterprise-wide Kubernetes platform on AWS serving 80+ development teams, improving system availability from 99.5\% to 99.9\% while reducing compute costs by 40\%
     \item Established comprehensive software reliability engineering standards including SLI/SLO definitions, error budgets, and incident management processes for 50+ production services
     \item Built self-service developer platform using Python and Flask—reducing provisioning time from 3 days to 15 minutes and eliminating ticket-based workflows
@@ -134,7 +134,7 @@ Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ A
 \subsection*{Capital One --- Site Reliability Engineer Manager}
 \textit{Plano, TX} \hfill \textit{February 2016 - October 2019}
 
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+\begin{itemize}[leftmargin=*, itemsep=0.5pt, topsep=2pt]
     \item Managed architecture and site reliability practice for enterprise-wide Kubernetes infrastructure spanning AWS and GCP, supporting 500+ microservices as technical lead with 60\% hands-on engineering
     \item Led cloud migration initiative for 100+ microservices from on-premise data centers to AWS and Kubernetes, completing migration 3 months ahead of schedule
     \item Designed multi-cloud Kubernetes architecture with unified control plane and cross-cloud service discovery, reducing vendor lock-in risk and enabling cost-optimized workload placement
@@ -146,13 +146,13 @@ Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ A
 \subsection*{Pariveda Solutions --- Senior Software Engineer}
 \textit{Plano, TX} \hfill \textit{August 2014 - February 2016}
 
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+\begin{itemize}[leftmargin=*, itemsep=0.5pt, topsep=2pt]
     \item Architected automated hybrid cloud solution using AWS, Chef, and Jenkins, enabling rapid environment provisioning for enterprise clients
     \item Developed cloud migration strategy for transitioning legacy applications from physical servers to hybrid cloud infrastructure
     \item Built RESTful API services and back-end systems for cross-platform mobile applications using Java and Spring Framework
 \end{itemize}
 
-\vspace{4pt}
+\vspace{3pt}
 
 % Education
 \section*{EDUCATION}
@@ -161,7 +161,7 @@ Certified Kubernetes Application Developer (CKAD) - Linux Foundation, 2020 $|$ A
 
 Bachelor of Science in Computer Science $|$ Cum Laude $|$ GPA: 3.92 $|$ Dean's List
 
-\vspace{4pt}
+\vspace{3pt}
 
 % Open Source & Community
 \section*{OPEN SOURCE \& COMMUNITY}
