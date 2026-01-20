@@ -76,10 +76,24 @@ fi
 echo ""
 echo -e "${BLUE}📋 Copying main resume to website...${NC}"
 
-# Copy the 3-page version as the main resume
+# Generate version timestamp (YYYYMMDDHHMM format)
+VERSION=$(date +%Y%m%d%H%M)
+
+# Copy the 3-page version as the main resume with version
 if [ -f "$RESUME_DIR/Daniel_Esponda_Resume_3page.pdf" ]; then
+    cp "$RESUME_DIR/Daniel_Esponda_Resume_3page.pdf" "$PUBLIC_DIR/Daniel_Esponda_Resume_v${VERSION}.pdf"
+    # Also create unversioned copy for direct access
     cp "$RESUME_DIR/Daniel_Esponda_Resume_3page.pdf" "$PUBLIC_DIR/Daniel_Esponda_Resume.pdf"
-    echo -e "${GREEN}✓ Copied main resume to public directory${NC}"
+    echo -e "${GREEN}✓ Copied main resume to public directory (version: v${VERSION})${NC}"
+
+    # Update HTML with versioned link
+    if [ -f "$PUBLIC_DIR/index.html" ]; then
+        # Find current version in HTML and replace with new version
+        sed -i.bak "s/Daniel_Esponda_Resume_v[0-9]*.pdf/Daniel_Esponda_Resume_v${VERSION}.pdf/g" "$PUBLIC_DIR/index.html"
+        sed -i.bak "s/Daniel_Esponda_Resume\.pdf\" download/Daniel_Esponda_Resume_v${VERSION}.pdf\" download/g" "$PUBLIC_DIR/index.html"
+        rm -f "$PUBLIC_DIR/index.html.bak"
+        echo -e "${GREEN}✓ Updated HTML with versioned link: v${VERSION}${NC}"
+    fi
 else
     echo -e "${YELLOW}⚠️  3-page resume not found${NC}"
 fi
