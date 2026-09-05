@@ -60,7 +60,12 @@ button { font: inherit; }
 .a-copy h1 { max-width: 700px; margin: 0; font-size: clamp(46px, 5vw, 75px); line-height: 1.02; letter-spacing: -.055em; font-weight: 600; }
 .a-copy h1 em { color: #66f2cc; font-style: normal; }
 .a-intro { max-width: 610px; margin: 30px 0 0; color: #98aaa5; font-size: 17px; line-height: 1.75; }
-.a-actions { display: flex; align-items: center; gap: 16px; margin-top: 42px; }
+.a-core-stack { max-width: 650px; margin-top: 30px; padding: 15px 0; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 20px; border-top: 1px solid #2a4039; border-bottom: 1px solid #2a4039; }
+.a-core-stack > span { color: #66f2cc; font: 600 10px "IBM Plex Mono", monospace; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.a-core-stack ul, .a-role-stack { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.a-core-stack li { color: #cbdad5; font: 500 11px "IBM Plex Mono", monospace; }
+.a-core-stack li:not(:last-child)::after { content: "/"; margin-left: 7px; color: #476159; }
+.a-actions { display: flex; align-items: center; gap: 16px; margin-top: 32px; }
 .a-actions a { display: flex; align-items: center; justify-content: space-between; gap: 34px; padding: 15px 18px; border-radius: 7px; text-decoration: none; font-size: 12px; font-weight: 700; }
 .a-primary { min-width: 196px; color: #07110e; background: #66f2cc; }
 .a-secondary { color: #d6e5e0; border: 1px solid #334a43; }
@@ -102,19 +107,20 @@ button { font: inherit; }
 .a-experience-intro h2 { margin: 0; color: #edf8f4; font-size: clamp(34px, 4vw, 52px); line-height: 1; letter-spacing: -.045em; font-weight: 560; }
 .a-experience-intro > p { max-width: 440px; margin: 0; color: #9aada7; font: 400 14px/1.7 "Manrope", sans-serif; }
 .a-experience-list { margin-top: 52px; border-top: 1px solid #334941; }
-.a-experience-list article { min-height: 120px; padding: 27px 12px; display: grid; grid-template-columns: .5fr 1.08fr .58fr 1.7fr auto; align-items: center; gap: 25px; border-bottom: 1px solid #2d403a; color: #98aaa4; }
-.a-experience-list article.is-current { margin: 0 -18px; padding-left: 30px; padding-right: 30px; border: 1px solid #3d5c52; border-left: 3px solid #66f2cc; border-radius: 5px; background: rgba(102,242,204,.035); }
-.a-experience-list time { color: #73e7c6; font: 600 11px "IBM Plex Mono", monospace; }
-.a-experience-list article > div { display: flex; flex-direction: column; }
-.a-experience-list h2, .a-experience-list h3 { margin: 0; color: #eef8f5; font: 600 18px "Manrope", sans-serif; letter-spacing: -.018em; }
-.a-experience-list article p { margin: 5px 0 0; color: #8ca099; font: 500 11px "Manrope", sans-serif; }
-.a-experience-list article strong { color: #d3e0dc; font: 600 14px "Manrope", sans-serif; }
-.a-experience-list article > span { color: #b4c5bf; font: 400 13px/1.6 "Manrope", sans-serif; }
-.a-experience-list article > b { padding: 7px 9px; color: #66f2cc; border: 1px solid #497064; border-radius: 3px; font: 600 9px "IBM Plex Mono", monospace; text-transform: uppercase; }
-.a-experience-list details { border-bottom: 1px solid #263a34; }
-.a-experience-list summary { padding: 21px 12px; display: flex; justify-content: space-between; color: #a0b2ac; font: 600 11px "Manrope", sans-serif; cursor: pointer; list-style: none; }
-.a-experience-list summary::-webkit-details-marker { display: none; }
-.a-experience-list summary span { color: #66f2cc; font-size: 15px; }
+.a-experience-item { min-height: 255px; padding: 40px 12px; display: grid; grid-template-columns: 170px 1fr; align-items: start; gap: 52px; border-bottom: 1px solid #2d403a; color: #98aaa4; }
+.a-experience-item.is-current { margin: 0 -18px; padding-left: 30px; padding-right: 30px; border: 1px solid #3d5c52; border-left: 3px solid #66f2cc; border-radius: 5px; background: rgba(102,242,204,.035); }
+.a-experience-meta { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.a-experience-meta time { color: #73e7c6; font: 600 11px "IBM Plex Mono", monospace; letter-spacing: .04em; }
+.a-experience-meta strong { color: #dbe8e4; font: 650 16px "Manrope", sans-serif; }
+.a-experience-meta b { padding: 7px 9px; color: #66f2cc; border: 1px solid #497064; border-radius: 3px; font: 600 8px "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+.a-experience-detail header { display: flex; flex-direction: column; }
+.a-experience-detail h2, .a-experience-detail h3 { margin: 0; color: #eef8f5; font: 600 25px "Manrope", sans-serif; letter-spacing: -.025em; }
+.a-experience-detail header p { margin: 7px 0 0; color: #8ca099; font: 500 11px "IBM Plex Mono", monospace; letter-spacing: .03em; text-transform: uppercase; }
+.a-experience-highlights { max-width: 980px; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; list-style: none; }
+.a-experience-highlights li { position: relative; padding-left: 19px; color: #becdc8; font: 400 15px/1.65 "Manrope", sans-serif; }
+.a-experience-highlights li::before { content: "↳"; position: absolute; left: 0; top: 1px; color: #66f2cc; font-family: "IBM Plex Mono", monospace; }
+.a-role-stack { margin-top: 24px; }
+.a-role-stack li { padding: 7px 10px; border: 1px solid #345148; border-radius: 4px; color: #a9beb7; background: #0f211c; font: 600 10px "IBM Plex Mono", monospace; letter-spacing: .04em; text-transform: uppercase; }
 .a-section { padding: 105px 0; border-top: 1px solid rgba(200,255,238,.12); }
 .a-section-label { display: flex; gap: 14px; color: #8da19a; font: 600 11px "IBM Plex Mono", monospace; letter-spacing: .09em; }
 .a-section-label span { color: #66f2cc; }
@@ -322,9 +328,7 @@ button { font: inherit; }
   .a-company-logo:last-child { border-right: 1px solid #263a34; }
   .a-experience-intro { grid-template-columns: 1fr; gap: 20px; }
   .a-experience-intro > p { max-width: 630px; }
-  .a-experience-list article { grid-template-columns: .55fr 1.25fr .65fr auto; }
-  .a-experience-list article > span { grid-column: 2 / 4; }
-  .a-experience-list article > b { grid-column: 4; grid-row: 1; }
+  .a-experience-item { grid-template-columns: 140px 1fr; gap: 30px; }
   .b-experience-list article { grid-template-columns: .55fr 1.25fr .65fr auto; }
   .b-experience-list article > span { display: none; }
   .a-role { grid-template-columns: 1fr 2fr; }
@@ -352,6 +356,7 @@ button { font: inherit; }
   .a-hero, .c-hero { padding: 58px 0 70px; }
   .a-copy h1, .c-terminal h1 { font-size: 48px; }
   .a-intro { font-size: 15px; }
+  .a-core-stack { grid-template-columns: 1fr; gap: 10px; }
   .a-actions { align-items: stretch; flex-direction: column; }
   .a-actions a { width: 100%; }
   .a-metrics { grid-template-columns: 1fr; }
@@ -364,11 +369,16 @@ button { font: inherit; }
   .a-company-logo { padding-inline: 18px; border-top: 1px solid #263a34; }
   .a-company-logo:first-child, .a-company-logo:nth-child(2) { border-top: 0; }
   .a-company-logo:last-child { grid-column: 1/-1; }
-  .a-experience-list article, .b-experience-list article { min-height: 125px; grid-template-columns: .7fr 1.5fr; gap: 12px 20px; }
-  .a-experience-list article.is-current, .b-experience-list article.is-current { margin-left: -7px; margin-right: -7px; padding-left: 18px; padding-right: 18px; }
-  .a-experience-list article > span { grid-column: 1 / -1; }
-  .a-experience-list article > b { grid-column: auto; grid-row: auto; }
-  .a-experience-list article > b, .b-experience-list article > b { justify-self: start; }
+  .a-experience-item { min-height: 0; padding: 34px 5px; grid-template-columns: 1fr; gap: 24px; }
+  .a-experience-item.is-current { margin-left: -7px; margin-right: -7px; padding-left: 18px; padding-right: 18px; }
+  .a-experience-meta { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px 16px; }
+  .a-experience-meta strong { grid-row: 2; }
+  .a-experience-meta b { grid-column: 2; grid-row: 1 / span 2; }
+  .a-experience-detail h2, .a-experience-detail h3 { font-size: 22px; }
+  .a-experience-highlights li { font-size: 14px; }
+  .b-experience-list article { min-height: 125px; grid-template-columns: .7fr 1.5fr; gap: 12px 20px; }
+  .b-experience-list article.is-current { margin-left: -7px; margin-right: -7px; padding-left: 18px; padding-right: 18px; }
+  .b-experience-list article > b { justify-self: start; }
   .a-role { grid-template-columns: 1fr; }
   .b-nav { grid-template-columns: 1fr auto; }
   .b-hero { padding-top: 52px; }
